@@ -1,6 +1,4 @@
-[![Code Climate](https://codeclimate.com/github/Orbweaver-Industries/datagrams/badges/gpa.svg)](https://codeclimate.com/github/Orbweaver-Industries/datagrams)
-
-[![Coveralls](https://coveralls.io/repos/github/Orbweaver-Industries/datagrams/badge.svg?branch=master)](https://coveralls.io/github/Orbweaver-Industries/datagrams?branch=master)
+[![Code Climate](https://codeclimate.com/github/Orbweaver-Industries/datagrams/badges/gpa.svg)](https://codeclimate.com/github/Orbweaver-Industries/datagrams) [![Coveralls](https://coveralls.io/repos/github/Orbweaver-Industries/datagrams/badge.svg?branch=master)](https://coveralls.io/github/Orbweaver-Industries/datagrams?branch=master)
 
 # Datagrams
 
