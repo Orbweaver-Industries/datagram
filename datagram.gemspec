@@ -1,17 +1,17 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'datagrams/version'
+require 'datagram/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "datagrams"
-  spec.version       = Datagrams::VERSION
+  spec.name          = "datagram"
+  spec.version       = Datagram.version
   spec.authors       = ["Dean Brundage"]
   spec.email         = ["github@deanandadie.net"]
 
   spec.summary       = %q{YA packet library}
   spec.description   = %q{Yet another ruby packet library}
-  spec.homepage      = 'https://github.com/Orbweaver-Industries/datagrams'
+  spec.homepage      = 'https://github.com/Orbweaver-Industries/datagram'
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})

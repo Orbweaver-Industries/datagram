@@ -1,6 +1,6 @@
 [![Code Climate](https://codeclimate.com/github/Orbweaver-Industries/datagrams/badges/gpa.svg)](https://codeclimate.com/github/Orbweaver-Industries/datagrams) [![Coveralls](https://coveralls.io/repos/github/Orbweaver-Industries/datagrams/badge.svg?branch=master)](https://coveralls.io/github/Orbweaver-Industries/datagrams?branch=master)
 
-# Datagrams
+# Datagram
 
 Yet another ruby packet library
 
@@ -9,7 +9,7 @@ Yet another ruby packet library
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'datagrams'
+gem 'datagram'
 ```
 
 And then execute:
@@ -18,7 +18,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install datagrams
+    $ gem install datagram
 
 ## Usage
 
@@ -30,5 +30,5 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/datagrams.
+Bug reports and pull requests are welcome on GitHub at https://github.com/orbweaver-industries/datagram.
 

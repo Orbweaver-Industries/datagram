@@ -1,4 +1,4 @@
-describe Datagrams do
+describe Datagram do
 
   let(:version) { described_class.version }
   let(:version_constant) { described_class.const_get(:VERSION) }
