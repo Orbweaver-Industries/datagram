@@ -4,17 +4,13 @@ describe Datagram::IPv4 do
   let(:data) { }
 
 
-#  it 'new constructs a valid class' do
-#    expect(datagram).to be_valid
-#  end
+  it 'has a destination address' do
+    expect(datagram).to respond_to(:dst_ip)
+  end
 
 
-#  context 'bad IPv4' do
-#    let(:data) { { version: 1 }}
-#
-#    it "is not valid when the version isn't 4" do
-#      expect( datagram ).to_not be_valid
-#    end
-#  end
+  it 'has a source address' do
+    expect(datagram).to respond_to(:src_ip)
+  end
 
 end

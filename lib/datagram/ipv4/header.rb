@@ -21,8 +21,8 @@ module Datagram
 #      unsigned :opt_len, 8,    "Option length"
 #      rest :opt_data,          "Option-specific data"
 
-    private
-
+#    private
+#
 #      def compute_checksum
 #        a = to_16bit_words.pack("nnnnnnNN")
 #

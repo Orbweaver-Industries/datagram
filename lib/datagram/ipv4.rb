@@ -1,12 +1,8 @@
-require 'ipaddr'
 module Datagram
   class IPv4 < Base
     autoload :Header, File.join('datagram','ipv4','header')
-
-    def initialize(args=nil)
-      super
-      self.header = Header.new(header)
-    end
+    extend Forwardable
+    def_delegators :@header, :dst_ip, :src_ip
 
   end
 end

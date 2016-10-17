@@ -1,10 +1,15 @@
 module Datagram
   class Ethernet < Base
+
+    extend Forwardable
+
     autoload :Header, File.join('datagram','ethernet','header')
 
-    def initialize(args=nil)
-      super
-      self.header = Header.new(header)
+    def_delegators :@header, :dst_mac, :src_mac, :type
+
+
+    def self.read(string=nil)
+      read_parts(string, 14)
     end
 
     # "\x01\x80\xC2\x00\x00\x00\x00\x0EX%\xEC:\x00&BB\x03\x00\x00\x00\x00\x00\x90\x00\x00\x0EX%\xEC:\x00\x00\x00\x00\x90\x00\x00\x0EX%\xEC:\x80\x01\x00\x00\x06\x00\x01\x00\x04\x00\xA5\xA5\xA5\xA5\xA5\xA5\xA5\xA5"
