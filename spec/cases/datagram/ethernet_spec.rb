@@ -1,9 +1,10 @@
 describe Datagram::Ethernet do
 
   let(:datagram) { described_class.new }
+  let(:header_class) { described_class.const_get :Header }
 
   it 'has an ethernet header' do
-    expect(datagram.header).to be_a(Datagram::Ethernet::Header)
+    expect(datagram.header).to be_a header_class
   end
 
 

@@ -28,7 +28,7 @@ module Datagram
 
       if( self.class.const_defined?(:Payload) )
         c = self.class.const_get(:Payload)
-        self.payload = c.new(self.payload)
+        self.payload = c.new(self, self.payload)
       end
 
     end
