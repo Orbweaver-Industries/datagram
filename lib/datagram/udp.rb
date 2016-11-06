@@ -1,5 +1,5 @@
 module Datagram
-  class UDP < Base
+  class UDP < DatagramBase
     autoload :Header, File.join('datagram', 'udp', 'header')
 
     def self.read(string=nil)

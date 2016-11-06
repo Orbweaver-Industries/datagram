@@ -1,6 +1,6 @@
 module Datagram
   # Parent class for them all
-  class Base < Struct.new(:header, :payload)
+  class DatagramBase < Struct.new(:header, :payload, :args)
 
     class << self
 
@@ -18,7 +18,7 @@ module Datagram
     end
 
 
-    def initialize(header=nil, payload=nil)
+    def initialize(header=nil, payload=nil, args={})
       super
 
       if( self.class.const_defined?(:Header) )
@@ -28,7 +28,7 @@ module Datagram
 
       if( self.class.const_defined?(:Payload) )
         c = self.class.const_get(:Payload)
-        self.payload = c.new(self, self.payload)
+        self.payload = c.new(self, self.payload, args[:payload_parser])
       end
 
     end

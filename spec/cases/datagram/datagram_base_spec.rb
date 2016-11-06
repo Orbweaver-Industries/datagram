@@ -1,4 +1,4 @@
-describe Datagram::Base do
+describe Datagram::DatagramBase do
 
   let(:datagram) { described_class.new }
 

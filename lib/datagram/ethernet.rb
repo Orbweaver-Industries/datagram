@@ -1,13 +1,12 @@
 module Datagram
-  class Ethernet < Base
+  class Ethernet < DatagramBase
 
     extend Forwardable
 
     autoload :Header, File.join('datagram','ethernet','header')
     autoload :Payload, File.join('datagram','ethernet','payload')
-    autoload :EthertypeParser, File.join('datagram','ethernet','ethertype_parser')
 
-    def_delegators :@header, :dst_mac, :src_mac, :type
+    def_delegators :header, :dst_mac, :src_mac, :type
 
 
     def self.read(string=nil)

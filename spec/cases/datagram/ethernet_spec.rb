@@ -17,4 +17,9 @@ describe Datagram::Ethernet do
     expect(datagram).to respond_to(:src_mac)
   end
 
+
+  it 'has a type' do
+    expect(datagram).to respond_to(:type)
+  end
+
 end

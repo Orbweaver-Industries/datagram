@@ -1,9 +1,11 @@
 module Datagram
   class Ethernet
-    class Header < BitStruct
-      hex_octets :dst_mac, 48, 'Destination MAC Address'
-      hex_octets :src_mac, 48, 'Source MAC Address'
-      unsigned :type, 16, 'Ethernet type'
+    class Header < Struct.new(:dst_mac, :src_mac, :type, :vlan_tags)
+
+      def initialize(dst_mac, src_mac, type, vlan_types=[])
+        super
+      end
+
     end
   end
 end

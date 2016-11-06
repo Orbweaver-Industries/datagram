@@ -3,18 +3,18 @@ describe Datagram::ARP::Header do
   let(:header) { described_class.new }
 
   context 'instantiation' do
-    FIELDS = [ :hlen,
-               :htype,
-               :oper,
-               :plen,
-               :ptype,
-               :sha,
-               :spa,
-               :tha,
-               :tpa
-             ]
+    ARP_FIELDS = [ :hlen,
+                   :htype,
+                   :oper,
+                   :plen,
+                   :ptype,
+                   :sha,
+                   :spa,
+                   :tha,
+                   :tpa
+                 ]
 
-    FIELDS.each do |field|
+    ARP_FIELDS.each do |field|
       let("#{field}_field".intern) { header.field_by_name(field) }
     end
 

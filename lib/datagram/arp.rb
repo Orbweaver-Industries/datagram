@@ -1,5 +1,5 @@
 module Datagram
-  class ARP < Base
+  class ARP < DatagramBase
     autoload :Header, File.join('datagram', 'arp', 'header')
 
     def self.read(string=nil)

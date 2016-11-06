@@ -3,27 +3,27 @@ describe Datagram::TCP::Header do
   let(:header) { described_class.new }
 
   context 'instantiation' do
-    FIELDS = [ :ack,
-               :checksum,
-               :dst_port,
-               :f_ack,
-               :f_ece,
-               :f_cwr,
-               :f_fin,
-               :f_ns,
-               :f_psh,
-               :f_rst,
-               :f_syn,
-               :f_urg,
-               :offset,
-               :reserved,
-               :seq,
-               :src_port,
-               :urg,
-               :w_size
-             ]
+    TCP_FIELDS = [ :ack,
+                   :checksum,
+                   :dst_port,
+                   :f_ack,
+                   :f_ece,
+                   :f_cwr,
+                   :f_fin,
+                   :f_ns,
+                   :f_psh,
+                   :f_rst,
+                   :f_syn,
+                   :f_urg,
+                   :offset,
+                   :reserved,
+                   :seq,
+                   :src_port,
+                   :urg,
+                   :w_size
+                 ]
 
-    FIELDS.each do |field|
+    TCP_FIELDS.each do |field|
       let("#{field}_field".intern) { header.field_by_name(field) }
     end
 

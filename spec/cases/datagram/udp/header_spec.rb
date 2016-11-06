@@ -3,13 +3,13 @@ describe Datagram::UDP::Header do
   let(:header) { described_class.new }
 
   context 'instantiation' do
-    FIELDS = [ :checksum,
-               :dst_port,
-               :len,
-               :src_port
-             ]
+    UDP_FIELDS = [ :checksum,
+                   :dst_port,
+                   :len,
+                   :src_port
+                 ]
 
-    FIELDS.each do |field|
+    UDP_FIELDS.each do |field|
       let("#{field}_field".intern) { header.field_by_name(field) }
     end
 

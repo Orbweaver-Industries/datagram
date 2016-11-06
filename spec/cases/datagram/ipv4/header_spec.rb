@@ -3,22 +3,22 @@ describe Datagram::IPv4::Header do
   let(:header) { described_class.new }
 
   context 'instantiation' do
-    FIELDS = [ :checksum,
-               :dscp,
-               :dst_ip,
-               :ecn,
-               :flags,
-               :foffset,
-               :id,
-               :ihl,
-               :len,
-               :protocol,
-               :src_ip,
-               :ttl,
-               :version
-             ]
+    IPv4_FIELDS = [ :checksum,
+                    :dscp,
+                    :dst_ip,
+                    :ecn,
+                    :flags,
+                    :foffset,
+                    :id,
+                    :ihl,
+                    :len,
+                    :protocol,
+                    :src_ip,
+                    :ttl,
+                    :version
+                  ]
 
-    FIELDS.each do |field|
+    IPv4_FIELDS.each do |field|
       let("#{field}_field".intern) { header.field_by_name(field) }
     end
 
