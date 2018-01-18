@@ -2,6 +2,8 @@ module Datagram
   # Parent class for them all
   class DatagramBase < Struct.new(:header, :payload, :args)
 
+    extend Forwardable
+
     class << self
 
       def read(string=nil)

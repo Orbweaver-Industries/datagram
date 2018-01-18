@@ -12,7 +12,6 @@ module Datagram
 
       def parse(string)
         type = ethertype_parser.new(string).ethertype
-puts "type #{type}"
       end
 
     private

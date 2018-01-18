@@ -3,7 +3,7 @@ module Datagram
 
     autoload :Ethernet, File.join('datagram', 'parser', 'ethernet')
 
-    def initialize(e=nil, defalut_parser=Ethernet)
+    def initialize(encapsulation=nil, defalut_parser=Ethernet)
       super
     end
 

@@ -1,8 +1,7 @@
 module Datagram
   class Ethernet < DatagramBase
 
-    extend Forwardable
-
+    autoload :Definition, File.join('datagram', 'ethernet', 'definition')
     autoload :Header, File.join('datagram','ethernet','header')
     autoload :Payload, File.join('datagram','ethernet','payload')
 
